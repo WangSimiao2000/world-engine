@@ -1,0 +1,13 @@
+id: cre-zhu-yin-shou
+type: creature
+name:
+  zh: 烛阴兽
+  en: Zhuyin Beast
+epoch: "epoch:01"
+tags: [原始, 巨兽, 光暗]
+status: canonical
+summary:
+  zh: 烛阴身上脱落的鳞片所化之兽，能吞噬光明
+  en: Beasts formed from scales shed by Zhuyin, capable of devouring light
+habitat: 幽冥之地
+danger_level: 7

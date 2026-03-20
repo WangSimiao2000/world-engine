@@ -1,0 +1,15 @@
+id: char-pan-gu
+type: character
+name:
+  zh: 盘古
+  en: Pangu
+epoch: "epoch:01"
+tags: [创世, 巨神, 牺牲]
+status: canonical
+summary:
+  zh: 开天辟地的创世巨神，以自身化为天地万物
+  en: The primordial giant who separated heaven and earth, transforming his body into all things
+role: creator
+lifespan:
+  start: "epoch:01"
+  end: "epoch:01"

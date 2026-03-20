@@ -1,0 +1,9 @@
+id: rel-xuwu-tianji
+type: relation
+source: char-xu-wu
+target: civ-tian-ji-ge
+relation_type: member_of
+epoch: "epoch:07"
+description:
+  zh: 虚无是天机阁的首席学者
+  en: Xuwu is the chief scholar of the Tianji Pavilion

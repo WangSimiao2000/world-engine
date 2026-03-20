@@ -1,0 +1,36 @@
+epochs:
+  - id: "epoch:01"
+    name:
+      zh: 混沌
+      en: Primordial Chaos
+    order: 1
+  - id: "epoch:02"
+    name:
+      zh: 太初
+      en: The First Dawn
+    order: 2
+  - id: "epoch:03"
+    name:
+      zh: 神荒
+      en: Age of Wild Gods
+    order: 3
+  - id: "epoch:04"
+    name:
+      zh: 万国
+      en: Rise of Civilizations
+    order: 4
+  - id: "epoch:05"
+    name:
+      zh: 礼法
+      en: Age of Order
+    order: 5
+  - id: "epoch:06"
+    name:
+      zh: 金潮
+      en: The Golden Tide
+    order: 6
+  - id: "epoch:07"
+    name:
+      zh: 元寂
+      en: The Meta Silence
+    order: 7

@@ -1,0 +1,15 @@
+id: char-zhu-yin
+type: character
+name:
+  zh: 烛阴
+  en: Zhuyin
+epoch: "epoch:01"
+tags: [原始, 光暗, 巨神]
+status: canonical
+summary:
+  zh: 掌管昼夜交替的原始巨神，睁眼为昼，闭眼为夜
+  en: The primordial giant who governs the alternation of day and night — eyes open for day, eyes closed for night
+role: guardian
+lifespan:
+  start: "epoch:01"
+  end: "epoch:01"

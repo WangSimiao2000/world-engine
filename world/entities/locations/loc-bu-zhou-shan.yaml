@@ -1,0 +1,12 @@
+id: loc-bu-zhou-shan
+type: location
+name:
+  zh: 不周山
+  en: Mount Buzhou
+epoch: "epoch:01"
+tags: [天柱, 创世, 神山]
+status: canonical
+summary:
+  zh: 撑天之柱，连接天地的神山
+  en: The pillar that holds up heaven, the divine mountain connecting heaven and earth
+region: 西北

@@ -1,0 +1,19 @@
+world_root: world
+
+epochs:
+  - epoch:01
+  - epoch:02
+  - epoch:03
+  - epoch:04
+  - epoch:05
+  - epoch:06
+  - epoch:07
+
+validation:
+  strict_tags: false
+  warn_orphans: true
+
+ai:
+  provider: openai
+  model: gpt-4o
+  hard_block: false

@@ -1,0 +1,9 @@
+id: meta-ann-001
+type: meta_annotation
+target: char-pan-gu
+annotation_type: narrative_awareness
+epoch: "epoch:07"
+observer: civ-tian-ji-ge
+content:
+  zh: 盘古的"开天辟地"行为模式与叙事结构中的"起始函数"高度吻合，疑似被叙事律所驱动而非自主行为。
+  en: Pangu's act of separating heaven and earth closely matches the "initiation function" in narrative structure, suggesting it was driven by narrative law rather than free will.

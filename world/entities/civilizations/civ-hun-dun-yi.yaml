@@ -1,0 +1,13 @@
+id: civ-hun-dun-yi
+type: civilization
+name:
+  zh: 混沌遗民
+  en: Remnants of Chaos
+epoch: "epoch:01"
+tags: [原始, 混沌, 遗存]
+status: canonical
+summary:
+  zh: 拒绝被分化的混沌存在，游离于天地秩序之外
+  en: Chaotic beings that refused differentiation, existing outside the order of heaven and earth
+rise_epoch: "epoch:01"
+fall_epoch: ""

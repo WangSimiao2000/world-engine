@@ -1,0 +1,13 @@
+id: cre-bi-fang
+type: creature
+name:
+  zh: 毕方
+  en: Bifang
+epoch: "epoch:01"
+tags: [火, 神鸟, 原始]
+status: canonical
+summary:
+  zh: 单足火鸟，出现之处必有大火
+  en: A one-legged fire bird — wherever it appears, great fires follow
+habitat: 火山
+danger_level: 5
