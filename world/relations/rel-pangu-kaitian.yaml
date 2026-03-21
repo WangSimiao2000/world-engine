@@ -1,9 +1,0 @@
-id: rel-pangu-kaitian
-type: relation
-source: char-pan-gu
-target: evt-kai-tian-pi-di
-relation_type: caused
-epoch: "epoch:01"
-description:
-  zh: 盘古开天辟地
-  en: Pangu caused the separation of heaven and earth

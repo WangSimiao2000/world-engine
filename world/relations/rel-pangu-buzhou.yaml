@@ -1,9 +1,0 @@
-id: rel-pangu-buzhou
-type: relation
-source: char-pan-gu
-target: loc-bu-zhou-shan
-relation_type: created_by
-epoch: "epoch:01"
-description:
-  zh: 盘古的脊骨化为不周山
-  en: Pangu's spine transformed into Mount Buzhou

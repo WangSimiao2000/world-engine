@@ -1,9 +1,0 @@
-id: rel-pangu-axe
-type: relation
-source: art-pan-gu-fu
-target: evt-kai-tian-pi-di
-relation_type: wielded_by
-epoch: "epoch:01"
-description:
-  zh: 盘古斧用于开天辟地
-  en: Pangu's Axe was used in the separation of heaven and earth
