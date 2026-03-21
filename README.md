@@ -46,6 +46,10 @@ worldengine export-schema
 - `engine/` — Validation engine + CLI
 - `docs/` — Contributor documentation
 
+## Documentation / 文档
+
+See [docs/INDEX.md](docs/INDEX.md) for the full documentation index (English & 中文).
+
 ## Contributing
 
-See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | [贡献指南（中文）](docs/CONTRIBUTING.zh.md)
+See [Contributing Guide](docs/CONTRIBUTING.md) | [贡献指南](docs/CONTRIBUTING.zh.md)
