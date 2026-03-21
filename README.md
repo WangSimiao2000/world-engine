@@ -48,4 +48,4 @@ worldengine export-schema
 
 ## Contributing
 
-See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
+See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | [贡献指南（中文）](docs/CONTRIBUTING.zh.md)

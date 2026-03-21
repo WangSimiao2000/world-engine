@@ -1,3 +1,5 @@
+[中文版](CONTRIBUTING.zh.md)
+
 # Contributing to World Engine 贡献指南
 
 ## Quick Start

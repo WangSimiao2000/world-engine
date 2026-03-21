@@ -1,3 +1,5 @@
+[中文版](EPOCH_GUIDE.zh.md)
+
 # Epoch Guide 纪元指南
 
 ## epoch:01 — 混沌 Hùn Dùn (Primordial Chaos)

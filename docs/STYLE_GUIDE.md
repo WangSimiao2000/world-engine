@@ -1,3 +1,5 @@
+[中文版](STYLE_GUIDE.zh.md)
+
 # Style Guide 风格指南
 
 Each epoch has a distinct tone. All prose (Markdown files) should match the tone of its epoch.

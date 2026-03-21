@@ -1,3 +1,5 @@
+[中文版](NAMING.zh.md)
+
 # Naming Conventions 命名规范
 
 ## IDs
