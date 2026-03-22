@@ -1,0 +1,84 @@
+# ============================================================
+# 地点示例文件 / Location Example File
+# ============================================================
+# 此文件以 _ 开头，不参与 CI 验证和正常读取
+# This file starts with _ and is excluded from CI validation
+# 
+# 用途 / Purpose:
+# - 展示地点设定的完整格式 / Show complete location format
+# - 作为新建地点的参考模板 / Reference template for new locations
+# ============================================================
+
+template: location
+id: loc-example-crystal-city  # 唯一标识符，格式: loc-<name> / Unique ID, format: loc-<name>
+
+# ============================================================
+# 必填项 / Required Fields
+# ============================================================
+
+# 地点名称 / Location Name
+# zh: 中文名称（必填）/ Chinese name (required)
+# en: 英文名称（选填）/ English name (optional)
+name:
+  zh: "水晶之城"
+  en: "Crystal City"
+
+# 所属区域 / Region
+region:
+  zh: "北方高原"
+  en: "Northern Highlands"
+
+# 所属纪元 ID / Epoch ID
+# 地点存在的时代 / Era when this location exists
+epoch: "epoch-third-age"
+
+# ============================================================
+# 可选项 / Optional Fields
+# ============================================================
+
+# 地点描述 / Location Description
+description:
+  zh: "一座由巨大水晶构成的古老城市，是精灵族的政治和文化中心。"
+  en: "An ancient city built from massive crystals, serving as the political and cultural center of the elves."
+
+# 叙事散文（Markdown 格式）/ Narrative Prose (Markdown format)
+prose:
+  zh: |
+    ## 建城历史
+    
+    水晶之城建于第一纪元末期，由精灵族的先祖使用古老魔法将山脉中的水晶塑造而成。
+    
+    ## 城市布局
+    
+    城市分为三个区域：
+    - **内城**：王宫和神殿所在地
+    - **中城**：贵族和学者居住区
+    - **外城**：商业区和平民居住区
+  en: |
+    ## City History
+    
+    Crystal City was built at the end of the First Age, shaped from mountain crystals by elven ancestors using ancient magic.
+    
+    ## City Layout
+    
+    The city is divided into three areas:
+    - **Inner City**: Location of the palace and temples
+    - **Middle City**: Residential area for nobles and scholars
+    - **Outer City**: Commercial district and commoner residences
+
+# 地点类型 / Location Type
+# 可选值: city, village, mountain, river, forest, desert, ocean, island, plain, ruins, sacred, other
+location_type: "city"
+
+# 控制势力 ID / Controlling Faction ID
+controlling_faction: "faction-elven-kingdom"
+
+# 上级地点 ID / Parent Location ID
+# 用于层级关系 / For hierarchical relationships
+parent_location: "loc-northern-highlands"
+
+# 版本信息 / Versioning Information
+versioning:
+  canon: true
+  source: "author-main"
+  priority: official

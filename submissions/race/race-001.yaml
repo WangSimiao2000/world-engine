@@ -1,0 +1,28 @@
+# 种族设定 / Race Template
+# 由 worldengine template init 生成
+
+template: race
+id: race-001
+
+# 必填项 / Required Fields
+name:
+  zh: ""  # 种族名称（中文必填，英文选填）
+  en: ""  # Race name (Chinese required, English optional) (optional)
+average_lifespan: 0  # 平均寿命（年） / Average lifespan (years)
+habitat:
+  zh: ""  # 栖息地描述
+  en: ""  # Habitat description (optional)
+
+# 可选项 / Optional Fields
+# description:
+#   zh: ""  # 种族描述
+#   en: ""  # Race description (optional)
+# prose:
+#   zh: ""  # 叙事散文（Markdown 格式）
+#   en: ""  # Narrative prose (Markdown format) (optional)
+# traits: []  # 种族特征列表 / List of racial traits
+# origin_epoch: ""  # (epoch_ref) 起源纪元 ID / Origin epoch ID
+# versioning:
+#   canon: true  # true=正史, false=野史
+#   source: ""  # 来源作者 ID
+#   priority: official  # official | secondary

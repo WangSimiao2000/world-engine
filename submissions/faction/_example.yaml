@@ -1,0 +1,119 @@
+# ============================================================
+# 势力示例文件 / Faction Example File
+# ============================================================
+# 此文件以 _ 开头，不参与 CI 验证和正常读取
+# This file starts with _ and is excluded from CI validation
+# 
+# 用途 / Purpose:
+# - 展示势力设定的完整格式 / Show complete faction format
+# - 作为新建势力的参考模板 / Reference template for new factions
+# ============================================================
+
+template: faction
+id: faction-example-northern-alliance  # 唯一标识符，格式: faction-<name> / Unique ID, format: faction-<name>
+
+# ============================================================
+# 必填项 / Required Fields
+# ============================================================
+
+# 势力名称 / Faction Name
+# zh: 中文名称（必填）/ Chinese name (required)
+# en: 英文名称（选填）/ English name (optional)
+name:
+  zh: "北方联盟"
+  en: "Northern Alliance"
+
+# 所属纪元 ID / Epoch ID
+# 势力活跃的时代 / Era when this faction is active
+epoch: "epoch-third-age"
+
+# 势力类型 / Faction Type
+# 可选值: nation, kingdom, empire, tribe, clan, guild, order, sect, alliance, other
+faction_type: "alliance"
+
+# 是否仍活跃 / Whether Still Active
+# true=活跃, false=已消亡 / true=active, false=dissolved
+active_status: true
+
+# ============================================================
+# 可选项 / Optional Fields
+# ============================================================
+
+# 势力描述 / Faction Description
+description:
+  zh: "由北方五大王国组成的军事同盟，旨在抵御南方帝国的扩张。"
+  en: "A military alliance formed by the five northern kingdoms to resist the expansion of the Southern Empire."
+
+# 叙事散文（Markdown 格式）/ Narrative Prose (Markdown format)
+prose:
+  zh: |
+    ## 成立背景
+    
+    第三纪元1200年，面对南方帝国的威胁，北方五国放下历史恩怨，缔结同盟。
+    
+    ## 组织结构
+    
+    联盟采用**轮值主席制**，每五年由一国担任盟主：
+    - 冰霜王国
+    - 山脉王国
+    - 森林王国
+    - 平原王国
+    - 海岸王国
+    
+    ## 军事力量
+    
+    联盟军总兵力约**五十万**，以重骑兵和弓箭手闻名。
+  en: |
+    ## Formation Background
+    
+    In year 1200 of the Third Age, facing the threat of the Southern Empire, the five northern nations set aside historical grievances and formed an alliance.
+    
+    ## Organizational Structure
+    
+    The alliance uses a **rotating presidency system**, with one nation serving as leader every five years:
+    - Frost Kingdom
+    - Mountain Kingdom
+    - Forest Kingdom
+    - Plains Kingdom
+    - Coastal Kingdom
+    
+    ## Military Strength
+    
+    The alliance army has approximately **500,000** troops, renowned for heavy cavalry and archers.
+
+# 建立年份（纪元内）/ Founding Year (within epoch)
+founding_year: 1200
+
+# 消亡年份（纪元内）/ Dissolution Year (within epoch)
+# 未填写表示仍存在 / Empty means still exists
+# dissolution_year: 1500
+
+# 领袖人物 ID / Leader Character ID
+leader: "char-alliance-commander"
+
+# 总部地点 ID / Headquarters Location ID
+headquarters: "loc-alliance-fortress"
+
+# 控制领土 ID 列表 / List of Controlled Territory IDs
+territories:
+  - "loc-frost-kingdom"
+  - "loc-mountain-kingdom"
+  - "loc-forest-kingdom"
+  - "loc-plains-kingdom"
+  - "loc-coastal-kingdom"
+
+# 盟友势力 ID 列表 / List of Allied Faction IDs
+allies:
+  - "faction-elven-kingdom"
+  - "faction-dwarven-clans"
+
+# 敌对势力 ID 列表 / List of Enemy Faction IDs
+enemies:
+  - "faction-southern-empire"
+  - "faction-dark-cult"
+
+# 版本信息 / Versioning Information
+versioning:
+  canon: true
+  source: "author-main"
+  priority: official

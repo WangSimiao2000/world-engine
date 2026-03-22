@@ -1,0 +1,105 @@
+# ============================================================
+# 神器示例文件 / Artifact Example File
+# ============================================================
+# 此文件以 _ 开头，不参与 CI 验证和正常读取
+# This file starts with _ and is excluded from CI validation
+# 
+# 用途 / Purpose:
+# - 展示神器设定的完整格式 / Show complete artifact format
+# - 作为新建神器的参考模板 / Reference template for new artifacts
+# ============================================================
+
+template: artifact
+id: artifact-example-dragon-blade  # 唯一标识符，格式: artifact-<name> / Unique ID, format: artifact-<name>
+
+# ============================================================
+# 必填项 / Required Fields
+# ============================================================
+
+# 神器名称 / Artifact Name
+# zh: 中文名称（必填）/ Chinese name (required)
+# en: 英文名称（选填）/ English name (optional)
+name:
+  zh: "龙牙剑"
+  en: "Dragon Fang Blade"
+
+# ============================================================
+# 可选项 / Optional Fields
+# ============================================================
+
+# 神器描述 / Artifact Description
+description:
+  zh: "由远古巨龙的牙齿锻造而成的神剑，剑身散发着淡淡的龙息。"
+  en: "A divine sword forged from the tooth of an ancient dragon, the blade emanates a faint dragon's breath."
+
+# 叙事散文（Markdown 格式）/ Narrative Prose (Markdown format)
+prose:
+  zh: |
+    ## 锻造传说
+    
+    据说龙牙剑是由第一纪元的传奇铸剑师**铁山**所造，他用了整整十年时间才完成这把神兵。
+    
+    ## 神器能力
+    
+    - 剑身永不磨损
+    - 可以切割任何物质
+    - 持有者获得龙的力量加持
+    
+    ## 历代持有者
+    
+    这把剑曾被多位英雄持有，每一位都在历史上留下了浓墨重彩的一笔。
+  en: |
+    ## Forging Legend
+    
+    It is said that the Dragon Fang Blade was created by the legendary swordsmith **Iron Mountain** in the First Age, taking him ten full years to complete.
+    
+    ## Artifact Powers
+    
+    - The blade never dulls
+    - Can cut through any material
+    - Grants the wielder the power of dragons
+    
+    ## Previous Owners
+    
+    This sword has been wielded by many heroes, each leaving a significant mark in history.
+
+# 神器类型 / Artifact Type
+# 可选值: weapon, armor, accessory, tool, container, vehicle, structure, other
+artifact_type: "weapon"
+
+# 稀有度 / Rarity Level
+# 可选值: common, uncommon, rare, legendary, mythical, divine
+rarity: "legendary"
+
+# 神器能力列表 / List of Artifact Powers
+powers:
+  - "永不磨损 / Never Dulls"
+  - "切割万物 / Cuts Through Anything"
+  - "龙之力量 / Dragon's Power"
+
+# 创造者人物 ID / Creator Character ID
+creator: "char-iron-mountain"
+
+# 创造纪元 ID / Creation Epoch ID
+creation_epoch: "epoch-first-age"
+
+# 创造年份（纪元内）/ Creation Year (within epoch)
+creation_year: 500
+
+# 当前持有者人物 ID / Current Owner Character ID
+current_owner: "char-hero-current"
+
+# 当前所在地点 ID / Current Location ID
+current_location: "loc-hero-fortress"
+
+# 历任持有者人物 ID 列表 / List of Previous Owner Character IDs
+previous_owners:
+  - "char-hero-ancient"
+  - "char-king-first"
+  - "char-warrior-legendary"
+
+# 版本信息 / Versioning Information
+versioning:
+  canon: true
+  source: "author-main"
+  priority: official

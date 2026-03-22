@@ -1,0 +1,79 @@
+# 植物模板定义 / Flora Template Definition
+# 用于定义世界观中的植物设定
+# For defining flora/plant settings in the world
+
+category: flora
+
+description:
+  zh: 植物设定模板，用于定义世界观中的植物
+  en: Flora template for defining plants in the world
+
+required:
+  - name: id
+    type: string
+    description:
+      zh: 唯一标识符，格式为 flora-<name>
+      en: Unique identifier, format flora-<name>
+    constraints:
+      - type: regex
+        value: "^flora-[a-z0-9-]+$"
+        errorCode: ERR_CONSTRAINT_REGEX
+        errorMessage:
+          zh: "ID 格式错误，应为 flora-<name>"
+          en: "Invalid ID format, should be flora-<name>"
+
+  - name: name
+    type: bilingual
+    description:
+      zh: 植物名称（中文必填，英文选填）
+      en: Plant name (Chinese required, English optional)
+
+optional:
+  - name: description
+    type: bilingual
+    description:
+      zh: 植物描述
+      en: Plant description
+
+  - name: prose
+    type: bilingual
+    description:
+      zh: 叙事散文（Markdown 格式）
+      en: Narrative prose (Markdown format)
+
+  - name: habitat
+    type: bilingual
+    description:
+      zh: 生长环境描述
+      en: Growth environment description
+
+  - name: properties
+    type: array<string>
+    description:
+      zh: 植物特性列表（如药用、毒性等）
+      en: List of plant properties (e.g., medicinal, toxic)
+
+  - name: rarity
+    type: string
+    description:
+      zh: 稀有度
+      en: Rarity level
+    constraints:
+      - type: enum
+        value: ["common", "uncommon", "rare", "legendary", "mythical"]
+        errorCode: ERR_CONSTRAINT_ENUM
+        errorMessage:
+          zh: "稀有度必须为 common, uncommon, rare, legendary, mythical 之一"
+          en: "Rarity must be one of common, uncommon, rare, legendary, mythical"
+
+  - name: locations
+    type: array<entity_ref>
+    description:
+      zh: 生长地点 ID 列表
+      en: List of location IDs where this plant grows
+
+  - name: versioning
+    type: versioning
+    description:
+      zh: 版本信息（正史/野史标记）
+      en: Versioning information (canon/non-canon marking)

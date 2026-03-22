@@ -1,0 +1,30 @@
+# 人物设定 / Character Template
+# 由 worldengine template init 生成
+
+template: character
+id: char-001
+
+# 必填项 / Required Fields
+name:
+  zh: ""  # 角色名称（中文必填，英文选填）
+  en: ""  # Character name (Chinese required, English optional) (optional)
+race: ""  # 实体 ID (race_ref)  # 所属种族 ID / Race ID this character belongs to
+birth_epoch: ""  # 纪元 ID (epoch_ref)  # 出生纪元 ID / Birth epoch ID
+birth_year: 0  # 出生年份（纪元内） / Birth year (within epoch)
+lifespan: 0  # 寿命（年） / Lifespan (years)
+versioning:
+  canon: true  # true=正史, false=野史
+  source: ""  # 来源作者 ID
+  priority: official  # official | secondary
+
+# 可选项 / Optional Fields
+# death_epoch: ""  # 死亡纪元 ID（未填写表示仍存活） / Death epoch ID (empty means still alive)
+# death_year: 0  # 死亡年份（纪元内） / Death year (within epoch)
+# description:
+#   zh: ""  # 角色描述
+#   en: ""  # Character description (optional)
+# prose:
+#   zh: ""  # 叙事散文（Markdown 格式）
+#   en: ""  # Narrative prose (Markdown format) (optional)
+# faction: ""  # 所属势力 ID / Faction ID this character belongs to
+# artifacts: []  # 持有的神器 ID 列表 / List of artifact IDs owned by this character

@@ -1,0 +1,92 @@
+# ============================================================
+# 人物示例文件 / Character Example File
+# ============================================================
+# 此文件以 _ 开头，不参与 CI 验证和正常读取
+# This file starts with _ and is excluded from CI validation
+# 
+# 用途 / Purpose:
+# - 展示人物设定的完整格式 / Show complete character format
+# - 作为新建人物的参考模板 / Reference template for new characters
+# ============================================================
+
+template: character
+id: char-example-hero  # 唯一标识符，格式: char-<name> / Unique ID, format: char-<name>
+
+# ============================================================
+# 必填项 / Required Fields
+# ============================================================
+
+# 角色名称 / Character Name
+# zh: 中文名称（必填）/ Chinese name (required)
+# en: 英文名称（选填）/ English name (optional)
+name:
+  zh: "李云龙"
+  en: "Li Yunlong"
+
+# 所属种族 ID / Race ID
+# 必须引用已存在的种族 / Must reference an existing race
+race: "race-human"
+
+# 出生纪元 ID / Birth Epoch ID
+# 必须引用已存在的纪元 / Must reference an existing epoch
+birth_epoch: "epoch-third-age"
+
+# 出生年份（纪元内）/ Birth Year (within epoch)
+# 必须为正整数 / Must be a positive integer
+birth_year: 1250
+
+# 寿命（年）/ Lifespan (years)
+# 必须为正整数 / Must be a positive integer
+lifespan: 85
+
+# 版本信息 / Versioning Information
+# canon: true=正史, false=野史 / true=canon, false=non-canon
+# source: 来源作者 ID / Source author ID
+# priority: official（官方）| secondary（二次创作）
+versioning:
+  canon: true
+  source: "author-main"
+  priority: official
+
+# ============================================================
+# 可选项 / Optional Fields
+# ============================================================
+
+# 死亡纪元 ID / Death Epoch ID
+# 未填写表示仍存活 / Empty means still alive
+death_epoch: "epoch-third-age"
+
+# 死亡年份（纪元内）/ Death Year (within epoch)
+death_year: 1335
+
+# 角色描述 / Character Description
+description:
+  zh: "第三纪元著名的剑术大师，曾单枪匹马击退魔族入侵。"
+  en: "A renowned sword master of the Third Age who single-handedly repelled a demon invasion."
+
+# 叙事散文（Markdown 格式）/ Narrative Prose (Markdown format)
+prose:
+  zh: |
+    ## 早年生涯
+    
+    李云龙出生于边境小镇，自幼展现出非凡的剑术天赋。
+    
+    ## 成名之战
+    
+    在第三纪元1280年的**暗影之战**中，他以一己之力守住了北方关隘。
+  en: |
+    ## Early Life
+    
+    Li Yunlong was born in a border town and showed extraordinary sword talent from childhood.
+    
+    ## Famous Battle
+    
+    In the **Battle of Shadows** in year 1280 of the Third Age, he single-handedly defended the northern pass.
+
+# 所属势力 ID / Faction ID
+faction: "faction-northern-alliance"
+
+# 持有的神器 ID 列表 / List of Artifact IDs
+artifacts:
+  - "artifact-dragon-blade"
+  - "artifact-phoenix-amulet"

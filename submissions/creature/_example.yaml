@@ -1,0 +1,77 @@
+# ============================================================
+# 生物示例文件 / Creature Example File
+# ============================================================
+# 此文件以 _ 开头，不参与 CI 验证和正常读取
+# This file starts with _ and is excluded from CI validation
+# 
+# 用途 / Purpose:
+# - 展示生物设定的完整格式 / Show complete creature format
+# - 作为新建生物的参考模板 / Reference template for new creatures
+# ============================================================
+
+template: creature
+id: creature-example-phoenix  # 唯一标识符，格式: creature-<name> / Unique ID, format: creature-<name>
+
+# ============================================================
+# 必填项 / Required Fields
+# ============================================================
+
+# 生物名称 / Creature Name
+# zh: 中文名称（必填）/ Chinese name (required)
+# en: 英文名称（选填）/ English name (optional)
+name:
+  zh: "火凤凰"
+  en: "Fire Phoenix"
+
+# ============================================================
+# 可选项 / Optional Fields
+# ============================================================
+
+# 生物描述 / Creature Description
+description:
+  zh: "传说中的神鸟，浑身燃烧着永不熄灭的火焰，死后能从灰烬中重生。"
+  en: "A legendary divine bird, engulfed in eternal flames, capable of rebirth from its own ashes."
+
+# 叙事散文（Markdown 格式）/ Narrative Prose (Markdown format)
+prose:
+  zh: |
+    ## 神话起源
+    
+    火凤凰被认为是太阳神的使者，它的羽毛能治愈任何疾病。
+    
+    ## 目击记录
+    
+    最后一次有记载的目击发生在**第二纪元末期**的火焰山脉。
+  en: |
+    ## Mythological Origin
+    
+    The Fire Phoenix is believed to be the messenger of the Sun God. Its feathers can cure any disease.
+    
+    ## Sighting Records
+    
+    The last documented sighting occurred in the **Flame Mountains** at the end of the Second Age.
+
+# 栖息地描述 / Habitat Description
+habitat:
+  zh: "火山口、熔岩洞穴以及极端高温的环境"
+  en: "Volcanic craters, lava caves, and extremely high-temperature environments"
+
+# 平均寿命（年）/ Average Lifespan (years)
+# 注意：凤凰可以重生，此处指单次生命周期
+# Note: Phoenix can rebirth, this refers to a single life cycle
+average_lifespan: 500
+
+# 危险等级 / Danger Level
+# 可选值: harmless, low, medium, high, extreme
+danger_level: "extreme"
+
+# 出没地点 ID 列表 / List of Location IDs
+locations:
+  - "loc-flame-mountains"
+  - "loc-sun-temple"
+
+# 版本信息 / Versioning Information
+versioning:
+  canon: true
+  source: "author-main"
+  priority: official

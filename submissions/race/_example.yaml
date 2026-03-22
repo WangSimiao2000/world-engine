@@ -1,0 +1,77 @@
+# ============================================================
+# 种族示例文件 / Race Example File
+# ============================================================
+# 此文件以 _ 开头，不参与 CI 验证和正常读取
+# This file starts with _ and is excluded from CI validation
+# 
+# 用途 / Purpose:
+# - 展示种族设定的完整格式 / Show complete race format
+# - 作为新建种族的参考模板 / Reference template for new races
+# ============================================================
+
+template: race
+id: race-example-elf  # 唯一标识符，格式: race-<name> / Unique ID, format: race-<name>
+
+# ============================================================
+# 必填项 / Required Fields
+# ============================================================
+
+# 种族名称 / Race Name
+# zh: 中文名称（必填）/ Chinese name (required)
+# en: 英文名称（选填）/ English name (optional)
+name:
+  zh: "精灵族"
+  en: "Elves"
+
+# 平均寿命（年）/ Average Lifespan (years)
+# 必须为正整数 / Must be a positive integer
+average_lifespan: 800
+
+# 栖息地描述 / Habitat Description
+habitat:
+  zh: "古老的森林深处，尤其是银叶林和永恒之森"
+  en: "Deep within ancient forests, especially the Silverleaf Woods and the Eternal Forest"
+
+# ============================================================
+# 可选项 / Optional Fields
+# ============================================================
+
+# 种族描述 / Race Description
+description:
+  zh: "精灵族是世界上最古老的智慧种族之一，以其优雅、长寿和与自然的深厚联系而闻名。"
+  en: "Elves are one of the oldest intelligent races in the world, known for their grace, longevity, and deep connection with nature."
+
+# 叙事散文（Markdown 格式）/ Narrative Prose (Markdown format)
+prose:
+  zh: |
+    ## 起源传说
+    
+    据说精灵族诞生于世界树的第一片落叶，继承了自然的智慧与永恒的生命力。
+    
+    ## 文化特征
+    
+    精灵族崇尚**和谐**与**平衡**，他们的建筑与自然融为一体，歌声能使花朵绽放。
+  en: |
+    ## Origin Legend
+    
+    It is said that elves were born from the first fallen leaf of the World Tree, inheriting nature's wisdom and eternal vitality.
+    
+    ## Cultural Traits
+    
+    Elves worship **harmony** and **balance**. Their architecture blends with nature, and their songs can make flowers bloom.
+
+# 种族特征列表 / List of Racial Traits
+traits:
+  - "夜视能力 / Night Vision"
+  - "魔法亲和 / Magic Affinity"
+  - "敏捷身手 / Agile Reflexes"
+  - "自然感知 / Nature Sense"
+
+# 起源纪元 ID / Origin Epoch ID
+origin_epoch: "epoch-first-age"
+
+# 版本信息 / Versioning Information
+versioning:
+  canon: true
+  source: "author-main"
+  priority: official

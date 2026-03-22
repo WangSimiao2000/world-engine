@@ -1,0 +1,137 @@
+# 历史事件模板定义 / History Event Template Definition
+# 用于定义世界观中的历史事件设定
+# For defining historical event settings in the world
+
+category: history
+
+description:
+  zh: 历史事件设定模板，用于定义世界观中的历史事件
+  en: History event template for defining historical events in the world
+
+required:
+  - name: id
+    type: string
+    description:
+      zh: 唯一标识符，格式为 event-<name>
+      en: Unique identifier, format event-<name>
+    constraints:
+      - type: regex
+        value: "^event-[a-z0-9-]+$"
+        errorCode: ERR_CONSTRAINT_REGEX
+        errorMessage:
+          zh: "ID 格式错误，应为 event-<name>"
+          en: "Invalid ID format, should be event-<name>"
+
+  - name: name
+    type: bilingual
+    description:
+      zh: 事件名称（中文必填，英文选填）
+      en: Event name (Chinese required, English optional)
+
+  - name: start_epoch
+    type: epoch_ref
+    description:
+      zh: 起始纪元 ID
+      en: Start epoch ID
+    constraints:
+      - type: ref_exists
+        value: epoch
+        errorCode: ERR_REF_EPOCH
+        errorMessage:
+          zh: "引用的纪元 ID 不存在"
+          en: "Referenced epoch ID does not exist"
+
+  - name: start_year
+    type: integer
+    description:
+      zh: 起始年份（纪元内）
+      en: Start year (within epoch)
+    constraints:
+      - type: range
+        value: { min: 1 }
+        errorCode: ERR_CONSTRAINT_RANGE
+        errorMessage:
+          zh: "年份必须为正整数"
+          en: "Year must be a positive integer"
+
+  - name: participants
+    type: array<entity_ref>
+    description:
+      zh: 参与人物 ID 列表
+      en: List of participant character IDs
+    constraints:
+      - type: ref_exists
+        value: character
+        errorCode: ERR_REF_MISSING
+        errorMessage:
+          zh: "引用的人物 ID 不存在"
+          en: "Referenced character ID does not exist"
+
+  - name: versioning
+    type: versioning
+    description:
+      zh: 版本信息（正史/野史标记）
+      en: Versioning information (canon/non-canon marking)
+
+optional:
+  - name: end_epoch
+    type: epoch_ref
+    description:
+      zh: 结束纪元 ID（未填写表示瞬时事件）
+      en: End epoch ID (empty means instantaneous event)
+
+  - name: end_year
+    type: integer
+    description:
+      zh: 结束年份（纪元内）
+      en: End year (within epoch)
+    constraints:
+      - type: range
+        value: { min: 1 }
+        errorCode: ERR_CONSTRAINT_RANGE
+        errorMessage:
+          zh: "年份必须为正整数"
+          en: "Year must be a positive integer"
+
+  - name: description
+    type: bilingual
+    description:
+      zh: 事件描述
+      en: Event description
+
+  - name: prose
+    type: bilingual
+    description:
+      zh: 叙事散文（Markdown 格式）
+      en: Narrative prose (Markdown format)
+
+  - name: locations
+    type: array<entity_ref>
+    description:
+      zh: 发生地点 ID 列表
+      en: List of location IDs where this event occurred
+
+  - name: factions
+    type: array<entity_ref>
+    description:
+      zh: 相关势力 ID 列表
+      en: List of related faction IDs
+
+  - name: artifacts
+    type: array<entity_ref>
+    description:
+      zh: 相关神器 ID 列表
+      en: List of related artifact IDs
+
+  - name: event_type
+    type: string
+    description:
+      zh: 事件类型
+      en: Event type
+    constraints:
+      - type: enum
+        value: ["war", "treaty", "discovery", "creation", "destruction", "migration", "founding", "death", "birth", "other"]
+        errorCode: ERR_CONSTRAINT_ENUM
+        errorMessage:
+          zh: "事件类型必须为有效的枚举值"
+          en: "Event type must be a valid enum value"

@@ -1,0 +1,79 @@
+# ============================================================
+# 植物示例文件 / Flora Example File
+# ============================================================
+# 此文件以 _ 开头，不参与 CI 验证和正常读取
+# This file starts with _ and is excluded from CI validation
+# 
+# 用途 / Purpose:
+# - 展示植物设定的完整格式 / Show complete flora format
+# - 作为新建植物的参考模板 / Reference template for new flora
+# ============================================================
+
+template: flora
+id: flora-example-moonflower  # 唯一标识符，格式: flora-<name> / Unique ID, format: flora-<name>
+
+# ============================================================
+# 必填项 / Required Fields
+# ============================================================
+
+# 植物名称 / Plant Name
+# zh: 中文名称（必填）/ Chinese name (required)
+# en: 英文名称（选填）/ English name (optional)
+name:
+  zh: "月光花"
+  en: "Moonflower"
+
+# ============================================================
+# 可选项 / Optional Fields
+# ============================================================
+
+# 植物描述 / Plant Description
+description:
+  zh: "一种只在满月之夜绽放的神秘花朵，花瓣散发着淡蓝色的荧光。"
+  en: "A mysterious flower that only blooms on full moon nights, its petals emit a pale blue luminescence."
+
+# 叙事散文（Markdown 格式）/ Narrative Prose (Markdown format)
+prose:
+  zh: |
+    ## 发现历史
+    
+    月光花最早由精灵族的草药师在银叶林中发现。
+    
+    ## 采集方法
+    
+    必须在**满月当晚**采集，否则花朵会在日出时化为尘埃。
+  en: |
+    ## Discovery History
+    
+    The Moonflower was first discovered by elven herbalists in the Silverleaf Woods.
+    
+    ## Harvesting Method
+    
+    Must be harvested on the **night of the full moon**, otherwise the flower will turn to dust at sunrise.
+
+# 生长环境描述 / Growth Environment Description
+habitat:
+  zh: "阴暗潮湿的森林深处，尤其是古树根部附近"
+  en: "Deep in dark, humid forests, especially near the roots of ancient trees"
+
+# 植物特性列表 / List of Plant Properties
+# 如药用、毒性等 / e.g., medicinal, toxic
+properties:
+  - "药用 / Medicinal"
+  - "发光 / Luminescent"
+  - "魔法催化剂 / Magic Catalyst"
+
+# 稀有度 / Rarity Level
+# 可选值: common, uncommon, rare, legendary, mythical
+rarity: "rare"
+
+# 生长地点 ID 列表 / List of Location IDs
+locations:
+  - "loc-silverleaf-woods"
+  - "loc-eternal-forest"
+
+# 版本信息 / Versioning Information
+versioning:
+  canon: true
+  source: "author-main"
+  priority: official

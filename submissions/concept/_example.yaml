@@ -1,0 +1,101 @@
+# ============================================================
+# 概念示例文件 / Concept Example File
+# ============================================================
+# 此文件以 _ 开头，不参与 CI 验证和正常读取
+# This file starts with _ and is excluded from CI validation
+# 
+# 用途 / Purpose:
+# - 展示概念设定的完整格式 / Show complete concept format
+# - 作为新建概念的参考模板 / Reference template for new concepts
+# ============================================================
+
+template: concept
+id: concept-example-elemental-magic  # 唯一标识符，格式: concept-<name> / Unique ID, format: concept-<name>
+
+# ============================================================
+# 必填项 / Required Fields
+# ============================================================
+
+# 概念名称 / Concept Name
+# zh: 中文名称（必填）/ Chinese name (required)
+# en: 英文名称（选填）/ English name (optional)
+name:
+  zh: "元素魔法体系"
+  en: "Elemental Magic System"
+
+# ============================================================
+# 可选项 / Optional Fields
+# ============================================================
+
+# 概念描述 / Concept Description
+description:
+  zh: "世界上最基础也是最广泛使用的魔法体系，通过操控自然元素来施展法术。"
+  en: "The most fundamental and widely used magic system in the world, casting spells by manipulating natural elements."
+
+# 叙事散文（Markdown 格式）/ Narrative Prose (Markdown format)
+prose:
+  zh: |
+    ## 体系概述
+    
+    元素魔法是所有魔法的基础，分为**五大元素**：
+    - 火 - 代表破坏与重生
+    - 水 - 代表治愈与变化
+    - 土 - 代表防御与稳定
+    - 风 - 代表速度与自由
+    - 雷 - 代表力量与审判
+    
+    ## 修炼方法
+    
+    修炼者需要与自然元素建立联系，通过冥想和实践来提升魔力。
+    
+    ## 等级划分
+    
+    | 等级 | 称号 | 能力描述 |
+    |------|------|----------|
+    | 1-3 | 学徒 | 基础元素操控 |
+    | 4-6 | 法师 | 复合元素法术 |
+    | 7-9 | 大法师 | 元素领域展开 |
+    | 10 | 元素之主 | 完全掌控单一元素 |
+  en: |
+    ## System Overview
+    
+    Elemental magic is the foundation of all magic, divided into **five elements**:
+    - Fire - Represents destruction and rebirth
+    - Water - Represents healing and change
+    - Earth - Represents defense and stability
+    - Wind - Represents speed and freedom
+    - Lightning - Represents power and judgment
+    
+    ## Cultivation Method
+    
+    Practitioners need to establish a connection with natural elements, improving their magical power through meditation and practice.
+    
+    ## Level Classification
+    
+    | Level | Title | Ability Description |
+    |-------|-------|---------------------|
+    | 1-3 | Apprentice | Basic elemental control |
+    | 4-6 | Mage | Compound elemental spells |
+    | 7-9 | Archmage | Elemental domain deployment |
+    | 10 | Elemental Lord | Complete mastery of a single element |
+
+# 概念类型 / Concept Type
+# 可选值: magic, religion, philosophy, technology, social, political, economic, cultural, other
+concept_type: "magic"
+
+# 相关势力 ID 列表 / List of Related Faction IDs
+related_factions:
+  - "faction-mage-guild"
+  - "faction-elemental-council"
+
+# 相关种族 ID 列表 / List of Related Race IDs
+related_races:
+  - "race-human"
+  - "race-elf"
+  - "race-dwarf"
+
+# 版本信息 / Versioning Information
+versioning:
+  canon: true
+  source: "author-main"
+  priority: official

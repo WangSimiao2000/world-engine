@@ -1,0 +1,68 @@
+# WorldEngine Validation Workflow
+# 世界观设定验证工作流
+#
+# 触发条件：当 PR 修改 submissions/ 或 templates/ 目录下的文件时
+# 验证步骤：
+# 1. 输出目录保护检查
+# 2. 模板格式校验
+# 3. 必填项校验
+# 4. 交叉引用验证
+#
+# 注意：
+# - 以 _ 开头的文件（如 _example.yaml）不参与验证
+# - CI 不执行测试，测试仅在本地运行
+#
+# **Validates: Requirements 5.1, 5.3, 5.4**
+
+name: Validate Submissions
+
+on:
+  pull_request:
+    paths:
+      - 'submissions/**'
+      - 'templates/**'
+
+jobs:
+  validate:
+    name: Validate WorldEngine Submissions
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 需要完整历史以比较变更
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Check output directory protection
+        run: |
+          # 检查是否有 _build/ 目录的变更
+          CHANGED_BUILD_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep "^_build/" || true)
+          if [ -n "$CHANGED_BUILD_FILES" ]; then
+            echo "::error::输出目录 _build/ 的内容由 CI 自动生成，禁止手动提交 / Output directory _build/ is auto-generated, manual commits are not allowed"
+            echo "变更的文件 / Changed files:"
+            echo "$CHANGED_BUILD_FILES"
+            exit 1
+          fi
+          echo "✅ 输出目录保护检查通过 / Output directory protection check passed"
+      
+      - name: Run validation
+        run: npm run validate
+        env:
+          GITHUB_BASE_REF: ${{ github.base_ref }}
+      
+      - name: Report validation result
+        if: failure()
+        run: |
+          echo "::error::验证失败，请检查上方的错误信息 / Validation failed, please check the error messages above"

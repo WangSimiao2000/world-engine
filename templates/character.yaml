@@ -1,0 +1,133 @@
+# 人物模板定义 / Character Template Definition
+# 用于定义世界观中的角色设定
+# For defining character settings in the world
+
+category: character
+
+description:
+  zh: 人物设定模板，用于定义世界观中的角色
+  en: Character template for defining characters in the world
+
+required:
+  - name: id
+    type: string
+    description:
+      zh: 唯一标识符，格式为 char-<name>
+      en: Unique identifier, format char-<name>
+    constraints:
+      - type: regex
+        value: "^char-[a-z0-9-]+$"
+        errorCode: ERR_CONSTRAINT_REGEX
+        errorMessage:
+          zh: "ID 格式错误，应为 char-<name>"
+          en: "Invalid ID format, should be char-<name>"
+
+  - name: name
+    type: bilingual
+    description:
+      zh: 角色名称（中文必填，英文选填）
+      en: Character name (Chinese required, English optional)
+
+  - name: race
+    type: entity_ref
+    refCategory: race
+    description:
+      zh: 所属种族 ID
+      en: Race ID this character belongs to
+    constraints:
+      - type: ref_exists
+        value: race
+        errorCode: ERR_REF_MISSING
+        errorMessage:
+          zh: "引用的种族 ID 不存在"
+          en: "Referenced race ID does not exist"
+
+  - name: birth_epoch
+    type: epoch_ref
+    description:
+      zh: 出生纪元 ID
+      en: Birth epoch ID
+    constraints:
+      - type: ref_exists
+        value: epoch
+        errorCode: ERR_REF_EPOCH
+        errorMessage:
+          zh: "引用的纪元 ID 不存在"
+          en: "Referenced epoch ID does not exist"
+
+  - name: birth_year
+    type: integer
+    description:
+      zh: 出生年份（纪元内）
+      en: Birth year (within epoch)
+    constraints:
+      - type: range
+        value: { min: 1 }
+        errorCode: ERR_CONSTRAINT_RANGE
+        errorMessage:
+          zh: "年份必须为正整数"
+          en: "Year must be a positive integer"
+
+  - name: lifespan
+    type: integer
+    description:
+      zh: 寿命（年）
+      en: Lifespan (years)
+    constraints:
+      - type: range
+        value: { min: 1 }
+        errorCode: ERR_CONSTRAINT_RANGE
+        errorMessage:
+          zh: "寿命必须为正整数"
+          en: "Lifespan must be a positive integer"
+
+  - name: versioning
+    type: versioning
+    description:
+      zh: 版本信息（正史/野史标记）
+      en: Versioning information (canon/non-canon marking)
+
+optional:
+  - name: death_epoch
+    type: epoch_ref
+    description:
+      zh: 死亡纪元 ID（未填写表示仍存活）
+      en: Death epoch ID (empty means still alive)
+
+  - name: death_year
+    type: integer
+    description:
+      zh: 死亡年份（纪元内）
+      en: Death year (within epoch)
+    constraints:
+      - type: range
+        value: { min: 1 }
+        errorCode: ERR_CONSTRAINT_RANGE
+        errorMessage:
+          zh: "年份必须为正整数"
+          en: "Year must be a positive integer"
+
+  - name: description
+    type: bilingual
+    description:
+      zh: 角色描述
+      en: Character description
+
+  - name: prose
+    type: bilingual
+    description:
+      zh: 叙事散文（Markdown 格式）
+      en: Narrative prose (Markdown format)
+
+  - name: faction
+    type: entity_ref
+    refCategory: faction
+    description:
+      zh: 所属势力 ID
+      en: Faction ID this character belongs to
+
+  - name: artifacts
+    type: array<entity_ref>
+    description:
+      zh: 持有的神器 ID 列表
+      en: List of artifact IDs owned by this character

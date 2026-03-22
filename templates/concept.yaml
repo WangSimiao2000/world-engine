@@ -1,0 +1,73 @@
+# 概念模板定义 / Concept Template Definition
+# 用于定义世界观中的抽象概念设定
+# For defining abstract concept settings in the world
+
+category: concept
+
+description:
+  zh: 概念设定模板，用于定义世界观中的抽象概念（如魔法体系、宗教信仰、社会制度等）
+  en: Concept template for defining abstract concepts in the world (e.g., magic systems, religions, social systems)
+
+required:
+  - name: id
+    type: string
+    description:
+      zh: 唯一标识符，格式为 concept-<name>
+      en: Unique identifier, format concept-<name>
+    constraints:
+      - type: regex
+        value: "^concept-[a-z0-9-]+$"
+        errorCode: ERR_CONSTRAINT_REGEX
+        errorMessage:
+          zh: "ID 格式错误，应为 concept-<name>"
+          en: "Invalid ID format, should be concept-<name>"
+
+  - name: name
+    type: bilingual
+    description:
+      zh: 概念名称（中文必填，英文选填）
+      en: Concept name (Chinese required, English optional)
+
+optional:
+  - name: description
+    type: bilingual
+    description:
+      zh: 概念描述
+      en: Concept description
+
+  - name: prose
+    type: bilingual
+    description:
+      zh: 叙事散文（Markdown 格式）
+      en: Narrative prose (Markdown format)
+
+  - name: concept_type
+    type: string
+    description:
+      zh: 概念类型
+      en: Concept type
+    constraints:
+      - type: enum
+        value: ["magic", "religion", "philosophy", "technology", "social", "political", "economic", "cultural", "other"]
+        errorCode: ERR_CONSTRAINT_ENUM
+        errorMessage:
+          zh: "概念类型必须为有效的枚举值"
+          en: "Concept type must be a valid enum value"
+
+  - name: related_factions
+    type: array<entity_ref>
+    description:
+      zh: 相关势力 ID 列表
+      en: List of related faction IDs
+
+  - name: related_races
+    type: array<entity_ref>
+    description:
+      zh: 相关种族 ID 列表
+      en: List of related race IDs
+
+  - name: versioning
+    type: versioning
+    description:
+      zh: 版本信息（正史/野史标记）
+      en: Versioning information (canon/non-canon marking)
