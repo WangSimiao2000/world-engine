@@ -37,7 +37,8 @@ export function validateRequiredFields(
     
     // 检查字段是否存在于 submission 中
     // 注意：值为 null 或 undefined 都视为缺失
-    if (!(fieldName in submission) || submission[fieldName] === undefined || submission[fieldName] === null) {
+    // 使用 Object.hasOwn 避免原型链上的属性干扰
+    if (!Object.hasOwn(submission, fieldName) || submission[fieldName] === undefined || submission[fieldName] === null) {
       missingFields.push(fieldName);
     }
   }
@@ -83,7 +84,8 @@ export function getMissingRequiredFields(
   for (const field of template.required) {
     const fieldName = field.name;
     
-    if (!(fieldName in submission) || submission[fieldName] === undefined || submission[fieldName] === null) {
+    // 使用 Object.hasOwn 避免原型链上的属性干扰
+    if (!Object.hasOwn(submission, fieldName) || submission[fieldName] === undefined || submission[fieldName] === null) {
       missingFields.push(fieldName);
     }
   }

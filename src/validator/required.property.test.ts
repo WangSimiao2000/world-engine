@@ -18,12 +18,22 @@ import { CATEGORIES, ErrorCodes } from '../types/index.js';
 const categoryArb = fc.constantFrom(...CATEGORIES);
 
 /**
+ * Reserved property names that exist on all JavaScript objects
+ */
+const RESERVED_PROPERTIES = new Set([
+  'constructor', 'prototype', '__proto__', 'hasOwnProperty',
+  'isPrototypeOf', 'propertyIsEnumerable', 'toLocaleString',
+  'toString', 'valueOf',
+]);
+
+/**
  * Arbitrary: Generate a valid field name (alphanumeric with underscores)
+ * Excludes JavaScript reserved property names
  */
 const fieldNameArb = fc.stringOf(
   fc.constantFrom(...'abcdefghijklmnopqrstuvwxyz_'),
   { minLength: 2, maxLength: 20 }
-).filter((s) => /^[a-z][a-z_]*$/.test(s));
+).filter((s) => /^[a-z][a-z_]*$/.test(s) && !RESERVED_PROPERTIES.has(s));
 
 /**
  * Arbitrary: Generate a field definition
