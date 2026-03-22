@@ -41,7 +41,7 @@ epochs:
       zh: "第三纪元"
       en: "Third Age"
     order: 3
-    duration: null  # null 表示当前纪元，持续中
+    duration: 1500
 ```
 
 #### 纪元字段说明
@@ -51,7 +51,7 @@ epochs:
 | `id` | string | 纪元唯一标识符，格式 `epoch-<name>` |
 | `name` | bilingual | 纪元名称 |
 | `order` | integer | 纪元顺序，用于时间比较 |
-| `duration` | integer/null | 纪元持续年数，`null` 表示当前纪元 |
+| `duration` | integer | 纪元持续年数（必填） |
 
 ### 时间表示
 
@@ -276,7 +276,7 @@ epochs:
       zh: "第三纪元"
       en: "Third Age"
     order: 3
-    duration: null  # null means current epoch, ongoing
+    duration: 1500
 ```
 
 #### Epoch Field Descriptions
@@ -286,7 +286,7 @@ epochs:
 | `id` | string | Unique epoch identifier, format `epoch-<name>` |
 | `name` | bilingual | Epoch name |
 | `order` | integer | Epoch order, used for time comparison |
-| `duration` | integer/null | Epoch duration in years, `null` for current epoch |
+| `duration` | integer | Epoch duration in years (required) |
 
 ### Time Representation
 
